@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl"
+       class="numeric"
+       version="1.0"
+       default-locale="vi-VN">
+
+  <info>
+    <title>Vietnamese Journal – Numeric (HNUE)</title>
+    <id>http://www.zotero.org/styles/vietnamese-journal-numeric-hnue</id>
+    <link href="http://www.zotero.org/styles/vietnamese-journal-numeric-hnue" rel="self"/>
+    <author>
+      <name>Custom for Vietnamese academic theses</name>
+    </author>
+    <category citation-format="numeric"/>
+    <summary>Numeric style for Vietnamese journals and theses (HNUE): quoted article titles, italic journal titles.</summary>
+    <updated>2025-01-01</updated>
+  </info>
+
+  <!-- Citation in text -->
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography -->
+  <bibliography hanging-indent="true" second-field-align="flush">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+
+    <layout suffix=".">
+      <!-- Citation number -->
+      <text variable="citation-number" suffix=". "/>
+
+      <!-- Authors -->
+      <names variable="author" et-al-min="4" et-al-use-first="3">
+        <name delimiter=", " and="text"/>
+        <et-al term="et-al"/>
+      </names>
+
+      <!-- Year -->
+      <date variable="issued" prefix=" (" suffix="), ">
+        <date-part name="year"/>
+      </date>
+
+      <!-- Article title -->
+      <text variable="title" prefix="“" suffix="”, "/>
+
+      <!-- Journal title -->
+      <text variable="container-title" font-style="italic" suffix=", "/>
+
+      <!-- Volume and issue -->
+      <group>
+        <text variable="volume"/>
+        <group prefix="(" suffix=")">
+          <text variable="issue"/>
+        </group>
+      </group>
+
+      <text value=", "/>
+
+      <!-- Pages -->
+      <text variable="page"/>
+    </layout>
+  </bibliography>
+
+</style>
+
